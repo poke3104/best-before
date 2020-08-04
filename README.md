@@ -1,24 +1,23 @@
-# README
+## foodsテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Options|
+|------|----|-------|
+|name|text|null: false|
+|preserve_id|integer|null: false, foreign_key: true|
+|limit_year|integer|null: false|
+|limit_month|integer|null: false|
+|limit_day|integer|null: false|
 
-Things you may want to cover:
+### Association
+- belongs_to :preserve_method
 
-* Ruby version
+## foodsテーブル
 
-* System dependencies
+|Column|Type|Options|
+|------|----|-------|
+|name|text|null: false|
+|method|text|null: false|
+|foods_id|integer|null: false, foreign_key: true|
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to :foods
