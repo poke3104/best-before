@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+.side-bar{
+  background-color:#253141;
+  width:300px;
+  height:800px;
+  float:left;
+  &__list{
+    height:100px;
+    padding-bottom: 40px;
+    text-align: center;
+    line-height:100px;
+    color:white;
+    margin-top: 20px;
+  }
+}
+
+.food-list__main{
+  float:right;
+  background-color:#fafafa;
+  width: calc(100vw - 314px);
+  height:800px;
+  &__name{
+    height:100px;
+    background-color:#ffffff;
+    border-bottom: solid 1px #eee;
+    &__title{
+    font-size:20px;
+    color:#333333;
+    padding-left:40px;
+    padding-top:35px;
+    }
+  }
+  &__position{
+    height: calc(100vh - 280px);
+    padding: 46px 40px;
+    background-color: #fafafa;
+    // overflow: scroll;
+    &__box{
+      height: 100px;
+      &__name{
+        font-size: 30px;
+      }
+      &__present-day{
+        display:inline;
+        font-size: 15px;
+      }
+      &__limit-day{
+        display:inline;
+        font-size: 15px;
+        padding-left: 15px;
+      }
+    }
+  }
+  &__form{
+    height:180px;
+    background-color:#d2d2d2;
+    .form-group{
+      width:100px;
+      &__name{
+        font-size: 20px;
+      }
+      &__input{
+        width: 300px;
+      }
+    }
+    .form-group-second{
+      // display:flex;
+      .limit{
+        font-size: 15px;
+      }
+      .imputform-box{
+        width:400px;
+        &__month{
+          display:inline;
+        }
+        &__month-text{
+          display:inline;
+        }
+        &__year{
+          display:inline;
+          padding-left:15px;
+        }
+        &__year-text{
+          display:inline;
+        }
+        &__day{
+          display:inline;
+          padding-left:15px;
+        }
+        &__day-text{
+          display:inline;
+        }
+      }
+    }
+  }
+}
+#number_form{
+  width:300px;
+}

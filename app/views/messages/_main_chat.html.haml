@@ -1,0 +1,96 @@
+.food-list__main
+  .food-list__main__name
+    .food-list__main__name__title
+      冷蔵品
+  .food-list__main__position
+    .food-list__main__position__box
+      .food-list__main__position__box__name
+        タマゴ
+      .food-list__main__position__box__present-day
+        購入日： 2020/08/01
+      .food-list__main__position__box__limit-day
+        賞味期限： 2020/08/07
+  .food-list__main__form
+    .form-group
+      = form_tag(method: :post, id: 'charge-form',  name: "inputForm") do
+        .form-group__name
+          食品名
+        .form-group__input
+          %input.text-form-number{:type => "text", :placeholder => "半角数字のみ", id: 'number_form'}
+    .form-group-second
+      .limit
+        賞味期限
+      .imputform-box
+        .imputform-box__month
+          %select{name:"exp_month",type:"text", id:'exp_month'}
+            %option{value:""}
+            %option{value:"1"}01
+            %option{value:"2"}02
+            %option{value:"3"}03
+            %option{value:"4"}04
+            %option{value:"5"}05
+            %option{value:"6"}06
+            %option{value:"7"}07
+            %option{value:"8"}08
+            %option{value:"9"}09
+            %option{value:"10"}10
+            %option{value:"11"}11
+            %option{value:"12"}12
+        .imputform-box__month-text
+          月
+        .imputform-box__year
+          %select{name:"exp_year",type:"text", id: 'exp_year'}
+            %option{value:""}
+            %option{value:"2019"}19
+            %option{value:"2020"}20
+            %option{value:"2021"}21
+            %option{value:"2022"}22
+            %option{value:"2023"}23
+            %option{value:"2024"}24
+            %option{value:"2025"}25
+            %option{value:"2026"}26
+            %option{value:"2027"}27
+            %option{value:"2028"}28
+            %option{value:"2029"}29
+            %option{value:"2029"}30
+        .imputform-box__year-text
+          年
+        .imputform-box__day
+          %select{name:"exp_day",type:"text", id: 'exp_day'}
+            %option{value:""}
+            %option{value:"1"}1
+            %option{value:"2"}2
+            %option{value:"3"}3
+            %option{value:"4"}4
+            %option{value:"5"}5
+            %option{value:"6"}6
+            %option{value:"7"}7
+            %option{value:"8"}8
+            %option{value:"9"}9
+            %option{value:"10"}10
+            %option{value:"11"}11
+            %option{value:"12"}12
+            %option{value:"13"}13
+            %option{value:"14"}14
+            %option{value:"15"}15
+            %option{value:"16"}16
+            %option{value:"17"}17
+            %option{value:"18"}18
+            %option{value:"19"}19
+            %option{value:"20"}20
+            %option{value:"21"}21
+            %option{value:"22"}22
+            %option{value:"23"}23
+            %option{value:"24"}24
+            %option{value:"25"}25
+            %option{value:"26"}26
+            %option{value:"27"}27
+            %option{value:"28"}28
+            %option{value:"29"}29
+            %option{value:"30"}30
+            %option{value:"31"}31
+        .imputform-box__day-text
+          日
+          .add
+            #card_token
+            = submit_tag "登録する", id: "token_submit", class: "button"
